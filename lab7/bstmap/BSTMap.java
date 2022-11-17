@@ -18,17 +18,10 @@ public class BSTMap<K extends Comparable<K>,V> implements Map61B<K,V>{
     }
     private int size;
     private Node root;
-    BSTMap(){
-        size = 0;
-    }
-    BSTMap(K key, V value){
-        root = new Node(key, value);
-        size = 0;
-    }
+
     public void printInOrder() {
         printInOrder(root);
     }
-
 
     private void printInOrder(Node current){
         if(current !=null){
@@ -126,7 +119,7 @@ public class BSTMap<K extends Comparable<K>,V> implements Map61B<K,V>{
 
 
     public static void main(String[] args) {
-        BSTMap<String, Integer> bst = new BSTMap<>();
+        BSTMap<String, Integer> bst = new BSTMap<String, Integer>();
         bst.put("Z",26);
         bst.put("A",1);
         bst.put("B",2);
